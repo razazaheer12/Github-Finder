@@ -15,7 +15,8 @@ A modern, dark-themed **GitHub User Finder** application that allows you to sear
 
 ## 📸 Preview
 
-![GitHub Finder Preview](https://via.placeholder.com/800x450/8b5cf6/ffffff?text=GitHub+User+Finder)
+<img width="947" height="437" alt="image" src="https://github.com/user-attachments/assets/9ecb0f68-0c42-425a-92cb-f8b32bae76f4" />
+
 
 > **Live URL:** [https://github-finder2002.netlify.app/](https://github-finder2002.netlify.app/)
 
