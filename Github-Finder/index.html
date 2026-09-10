@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Github User Finder</title>
+    <title>GitHub User Finder | Profile Explorer</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -16,27 +16,45 @@
   <body>
     <div class="container">
       <header>
-        <h1><i class="fab fa-github"></i> GitHub User Finder</h1>
-        <p>Search for any GitHub user to see their profile and repositories</p>
+        <h1><i class="fab fa-github"></i> GitHub Finder</h1>
+        <p>Explore developer profiles, repositories, and statistics instantly</p>
       </header>
 
-      <div class="search-container">
-        <input
-          type="text"
-          id="search"
-          placeholder="Enter a GitHub username..."
-          autocomplete="off"
-        />
-        <button id="search-btn">Search</button>
+      <div class="search-section">
+        <div class="search-container">
+          <input
+            type="text"
+            id="search"
+            placeholder="Search GitHub username..."
+            autocomplete="off"
+          />
+          <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+        <!-- Recent Searches History Feature -->
+        <div id="history-container" class="history-container hidden">
+          <div class="history-header">
+            <span><i class="fas fa-history"></i> Recent Searches:</span>
+            <button id="clear-history" title="Clear History">Clear</button>
+          </div>
+          <div id="history-tags" class="history-tags"></div>
+        </div>
       </div>
 
       <div id="profile-container" class="hidden">
         <div class="profile-header">
-          <img src="" alt="Profile avatar" id="avatar" />
+          <div class="avatar-wrapper">
+            <img src="" alt="Profile avatar" id="avatar" />
+            <div class="status-badge"><i class="fas fa-bolt"></i></div>
+          </div>
           <div class="profile-info">
-            <h2 id="name"></h2>
+            <div class="name-share">
+              <h2 id="name"></h2>
+              <button id="share-btn" class="share-btn" title="Copy Profile Link">
+                <i class="fas fa-share-nodes"></i>
+              </button>
+            </div>
             <p id="username"></p>
-            <p id="bio"></p>
+            <p id="bio" class="bio"></p>
             <div class="location-date">
               <p>
                 <i class="fas fa-map-marker-alt"></i>
@@ -44,27 +62,36 @@
               </p>
               <p>
                 <i class="far fa-calendar-alt"></i>
-                Joined
-                <span id="joined-date"></span>
+                Joined <span id="joined-date"></span>
               </p>
             </div>
-            <a id="profile-link" target="_blank" class="btn"> View Profile </a>
+            <a id="profile-link" target="_blank" class="btn">
+              <i class="fab fa-github"></i> View GitHub Profile
+            </a>
           </div>
         </div>
 
         <div class="stats">
           <div class="stat">
             <i class="fas fa-users"></i>
-            <span id="followers"></span> followers
+            <div>
+              <span id="followers" class="stat-value">0</span>
+              <span class="stat-label">Followers</span>
+            </div>
           </div>
-
           <div class="stat">
             <i class="fas fa-user-friends"></i>
-            <span id="following"></span> following
+            <div>
+              <span id="following" class="stat-value">0</span>
+              <span class="stat-label">Following</span>
+            </div>
           </div>
           <div class="stat">
             <i class="fas fa-code-branch"></i>
-            <span id="repos"></span> repositories
+            <div>
+              <span id="repos" class="stat-value">0</span>
+              <span class="stat-label">Repositories</span>
+            </div>
           </div>
         </div>
 
@@ -79,22 +106,25 @@
           </div>
           <div class="info-item" id="linkedin-container">
             <i class="fab fa-linkedin"></i>
-            <a id="linkedin" href="https://www.linkedin.com/in/raza-zaheer-416745340/" target="_blank">LinkedIn</a>
+            <a id="linkedin" href="#" target="_blank">Social</a>
           </div>
         </div>
 
         <div class="repos-section">
-          <h3>Latest Repositories</h3>
+          <div class="repos-header">
+            <h3><i class="fas fa-laptop-code"></i> Latest Repositories</h3>
+          </div>
           <div id="repos-container" class="repos-container">
-            <!-- Repositories will be inserted here dynamically -->
-
-            <div class="loading-repos">Loading repositories...</div>
+            <div class="loading-repos">
+              <i class="fas fa-spinner fa-spin"></i> Loading repositories...
+            </div>
           </div>
         </div>
       </div>
 
       <div id="error-container" class="hidden">
-        <p>No user found. Please try another username.</p>
+        <i class="fas fa-exclamation-triangle"></i>
+        <p>User not found. Please check the username and try again.</p>
       </div>
     </div>
 
