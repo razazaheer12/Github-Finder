@@ -11,14 +11,15 @@ A modern, dark-themed **GitHub User Finder** application that allows you to sear
   </a>
 </p>
 
+
+<img width="946" height="435" alt="image" src="https://github.com/user-attachments/assets/3a200fcb-2615-4095-a3b2-38e9642a4be0" />
+
+
 ---
 
-## 📸 Preview
-
-<img width="947" height="437" alt="image" src="https://github.com/user-attachments/assets/b1529cbd-cb22-4c93-92d4-a5a3e7ed8902" />
-
-
-> **Live URL:** [https://github-finder2002.netlify.app/](https://github-finder2002.netlify.app/)
+  <a href="https://github-finder2002.netlify.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Live%20Demo-View%20Site-brightgreen?style=for-the-badge&logo=netlify" alt="Live Demo" />
+  </a>
 
 ---
 
